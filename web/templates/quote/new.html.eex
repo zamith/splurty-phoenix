@@ -1,0 +1,5 @@
+<h1>New Quote</h1>
+
+<%= form_for @quote, quote_path(@conn, :create), fn form -> %>
+  <%= render "_form.html", quote: @quote, form: form %>
+<% end %>

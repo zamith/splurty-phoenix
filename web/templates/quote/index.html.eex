@@ -1,0 +1,21 @@
+<table class="col-md-12">
+  <thead>
+    <tr>
+      <th>Saying</th>
+      <th>Author</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for quote <- @quotes do %>
+      <tr>
+        <td><%= link quote.saying, to: quote_path(@conn, :show, quote.id) %></td>
+        <td><%= quote.author %></td>
+        <td>
+          <%= link "Edit", to: quote_path(@conn, :edit, quote.id) %>
+          <%= link "Delete", to: quote_path(@conn, :delete, quote.id), method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

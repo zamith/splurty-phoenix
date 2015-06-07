@@ -1,0 +1,9 @@
+<div class="form-group">
+  <%= label @form, :saying, "Saying" %>
+  <%= text_input @form, :saying, class: "form-control" %>
+
+  <%= label @form, :author, "Author" %>
+  <%= text_input @form, :author, class: "form-control" %>
+</div>
+
+<%= submit "Save", class: "btn btn-primary" %>
