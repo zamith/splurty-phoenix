@@ -12,11 +12,9 @@ defmodule Splurty.Quote do
     def random do
       query = from q in Splurty.Quote,
                 limit: 1,
-                select: [q.saying, q.author],
                 order_by: fragment("random()")
 
-      [saying, author] = Splurty.Repo.all(query) |> List.first
-      %Splurty.Quote{saying: saying, author: author}
+      Splurty.Repo.all(query) |> List.first
     end
   end
 end

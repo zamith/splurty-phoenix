@@ -12,11 +12,49 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
   </head>
 
-  <body>
+  <body class="site">
+    <header>
+      <div class="col-xs-6">
+        <div class="circle">
+          <br />
+          Elixir &
+          <br />
+          Erlang
+          <br />
+          Rock!
+        </div>
+      </div>
+
+      <div class="col-xs-6 text-right">
+        <div id="header-links">
+          <a href="<%= quote_path(@conn, :new) %>">Contribute</a>
+        </div>
+      </div>
+    </header>
     <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
     <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
-    <%= @inner %>
+    <hr class="clear col-xs-12"/>
+
+    <main class="site-content">
+      <%= @inner %>
+    </main>
+
+    <footer>
+      <div class="col-xs-6">
+        <a href="<%= quote_path(@conn, :homepage)%>">
+          This isn't enough, I need more
+        </a>
+      </div>
+      <div class="col-xs-6 text-right">
+        <a href="http://elixir-lang.org">
+          <img src="/images/elixir.png"/>
+        </a>
+        <a href="http://www.phoenixframework.org/">
+          <img src="/images/phoenix.png" />
+        </a>
+      </div>
+    </footer>
 
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
     <script>require("web/static/js/app")</script>

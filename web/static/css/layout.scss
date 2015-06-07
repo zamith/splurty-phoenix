@@ -1,0 +1,80 @@
+/* Phoenix flash messages */
+.alert:empty { display: none; }
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+header {
+  border-top: 9px solid #222;
+}
+
+.circle {
+  -ms-transform:rotate(11deg); /* IE 9 */
+  -webkit-transform:rotate(11deg); /* Opera, Chrome, and Safari */
+  background: #f84342;
+  border-radius: 100%;
+  border: 1px solid #F7F7F7;
+  color: #FFF;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 200;
+  height: 80px;
+  line-height: 16px;
+  margin: 10px 10px;
+  position: relative;
+  text-align: center;
+  transform:rotate(11deg);
+  width: 80px;
+}
+
+.clear {
+  clear: both;
+}
+
+hr {
+  margin: 0;
+}
+
+#header-links {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+#header-links a {
+  color: black;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+#header-links a:hover {
+  color: #f84342;
+}
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+footer {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+footer a {
+  color: #333;
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color:black;
+}
+
+footer img {
+  height:30px;
+}
